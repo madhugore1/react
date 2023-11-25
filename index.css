@@ -16,6 +16,7 @@
 
 .nav-items > ul {
     display: flex;
+    align-items: center;
     list-style-type: none;
     font-size: 20px;
 }
@@ -25,8 +26,18 @@
     margin: 0px 10px;
 }
 
+.login-btn {
+    padding: 10px;
+    margin: 0px 10px;   
+}
+
 .filter {
     padding: 10px;
+    display: flex;
+}
+
+.filter-btn {
+    margin: 0px 10px;
 }
 
 .res-container {
@@ -62,4 +73,16 @@
 
 .res-content > h5 {
     margin: 10px 0px;
+}
+
+.shimmer-ui-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card {
+    width: 200px;
+    height: 300px;
+    margin: 5px;
+    background-color: #f0f0f0;
 }
