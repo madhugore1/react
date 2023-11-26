@@ -1,7 +1,8 @@
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { RES_CARD_TYPE, SWIGGY_API_URL } from "../utils/constants";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
-import { useState, useEffect } from "react";
-import { RES_CARD_TYPE, SWIGGY_API_URL } from "../utils/constants";
 
 const Body = () => {
   // Local State Variables
@@ -76,10 +77,19 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {filteredResList.length === 0 && <Shimmer />}
-        {filteredResList.map((resData) => (
-          <RestaurantCard resData={resData} key={resData.id} />
-        ))}
+        {filteredResList.length === 0 ? (
+          <Shimmer />
+        ) : (
+          filteredResList.map((resData) => (
+            <Link
+              to={`/restaurants/${resData.id}`}
+              key={resData.id}
+              className="res-link"
+            >
+              <RestaurantCard resData={resData} />
+            </Link>
+          ))
+        )}
       </div>
     </div>
   );

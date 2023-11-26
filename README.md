@@ -55,3 +55,8 @@ Repository to maintain react learnings from the course "Namaste Javascript" by A
 
 1.  useState
 2.  useEffect
+
+# 2 Types of Routing:
+
+- Client side routing: Single Page Applications - Different components are rendered from client side based on the routes
+- Server side routing: Separate network calls to fetch different pages for different routes
